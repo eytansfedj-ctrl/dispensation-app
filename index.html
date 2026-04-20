@@ -63,14 +63,13 @@ async function analyser() {
     const mediaType = file.type || 'image/jpeg';
     
     try {
-      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://api.anthropic.com/v1/messages');
+    const proxyUrl = '/api/proxy';
       
       const response = await fetch(proxyUrl, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-api-key': API_KEY,
-          'anthropic-version': '2023-06-01'
+     headers: {
+  'Content-Type': 'application/json'
+},
         },
         body: JSON.stringify({
           model: 'claude-sonnet-4-6',
