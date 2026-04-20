@@ -63,7 +63,7 @@ async function analyser() {
     const mediaType = file.type || 'image/jpeg';
     
     try {
-      const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://api.anthropic.com/v1/messages');
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://api.anthropic.com/v1/messages');
       
       const response = await fetch(proxyUrl, {
         method: 'POST',
